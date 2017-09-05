@@ -49,6 +49,11 @@ MAINTENANCE_MODE_IGNORE_SUPERUSER = False
 ```
 
 ```python
+# if True only logged users will see the maintenance-mode page
+MAINTENANCE_MODE_IGNORE_ANONYMOUS = False
+```
+
+```python
 # list of ip-addresses that will not be affected by the maintenance-mode
 # ip-addresses will be used to compile regular expressions objects
 MAINTENANCE_MODE_IGNORE_IP_ADDRESSES = ()
