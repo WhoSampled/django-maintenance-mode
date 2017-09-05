@@ -15,7 +15,7 @@ It doesn't use database and doesn't prevent database access.
 
 ## Installation
 
-1. Run ``pip install django-maintenance-mode`` or [download django-maintenance-mode](http://pypi.python.org/pypi/django-maintenance-mode) and add the **maintenance_mode** package to your project
+1. Install the package from this repository
 2. Add ``'maintenance_mode'`` to ``settings.INSTALLED_APPS`` before custom applications
 3. Add ``'maintenance_mode.middleware.MaintenanceModeMiddleware'`` to ``settings.MIDDLEWARE_CLASSES`` as last middleware
 4. Add your custom ``templates/503.html`` file
