@@ -40,6 +40,9 @@ MAINTENANCE_MODE_IGNORE_STAFF = False
 #if True the superuser will not see the maintenance-mode page
 MAINTENANCE_MODE_IGNORE_SUPERUSER = False
 
+#if True only logged users will see the maintenance-mode page
+MAINTENANCE_MODE_IGNORE_ANONYMOUS = False
+
 #list of ip-addresses that will not be affected by the maintenance-mode
 #ip-addresses will be used to compile regular expressions objects
 MAINTENANCE_MODE_IGNORE_IP_ADDRESSES = ()
