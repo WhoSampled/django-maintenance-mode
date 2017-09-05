@@ -1,11 +1,4 @@
-[![Build Status](https://travis-ci.org/fabiocaccamo/django-maintenance-mode.svg?branch=master)](https://travis-ci.org/fabiocaccamo/django-maintenance-mode)
-[![coverage](https://codecov.io/gh/fabiocaccamo/django-maintenance-mode/branch/master/graph/badge.svg)](https://codecov.io/gh/fabiocaccamo/django-maintenance-mode)
-[![Code Health](https://landscape.io/github/fabiocaccamo/django-maintenance-mode/master/landscape.svg?style=flat)](https://landscape.io/github/fabiocaccamo/django-maintenance-mode/master)
-[![PyPI version](https://badge.fury.io/py/django-maintenance-mode.svg)](https://badge.fury.io/py/django-maintenance-mode)
-[![Py versions](https://img.shields.io/pypi/pyversions/django-maintenance-mode.svg)](https://img.shields.io/pypi/pyversions/django-maintenance-mode.svg)
-[![License](https://img.shields.io/pypi/l/django-maintenance-mode.svg)](https://img.shields.io/pypi/l/django-maintenance-mode.svg)
-
-# django-maintenance-mode
+# django-maintenance-mode (fork)
 django-maintenance-mode shows a 503 error page when **maintenance-mode** is **on**.
 
 It works at application level, so your django instance should be up.
@@ -18,7 +11,7 @@ It doesn't use database and doesn't prevent database access.
 
 ## Installation
 
-1. Run ``pip install django-maintenance-mode`` or [download django-maintenance-mode](http://pypi.python.org/pypi/django-maintenance-mode) and add the **maintenance_mode** package to your project
+1. Install package from this repository
 2. Add ``'maintenance_mode'`` to ``settings.INSTALLED_APPS`` before custom applications
 3. Add ``'maintenance_mode.middleware.MaintenanceModeMiddleware'`` to ``settings.MIDDLEWARE_CLASSES`` as last middleware
 4. Add your custom ``templates/503.html`` file
