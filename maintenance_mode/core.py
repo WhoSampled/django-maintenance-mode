@@ -21,7 +21,7 @@ def set_maintenance_mode(value):
     if not isinstance(value, bool):
         raise TypeError('value argument type is not boolean')
 
-    if settings.MAINTENANCE_MODE_EXPIRE_DB_SESSIONS:
+    if settings.MAINTENANCE_MODE_EXPIRE_DB_SESSIONS and value:
         Session.objects.all().delete()
 
     value = str(int(value))
