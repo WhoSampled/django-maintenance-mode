@@ -26,6 +26,9 @@ All these settings are optional, if not defined in ``settings.py`` the default v
 #if True the maintenance-mode will be activated
 MAINTENANCE_MODE = False
 
+#if True all database sessions will be expired
+MAINTENANCE_MODE_EXPIRE_DB_SESSIONS = False
+
 #by default, a file named "maintenance_mode_state.txt" will be created in the same directory of the settings.py file
 #you can customize the state file path in case the default one is not writable
 MAINTENANCE_MODE_STATE_FILE_PATH = 'maintenance_mode_state.txt'
