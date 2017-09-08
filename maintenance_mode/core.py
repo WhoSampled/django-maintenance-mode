@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from django.contrib.sessions.models import Session
-
 from maintenance_mode import io, settings
 
 
@@ -20,9 +18,6 @@ def set_maintenance_mode(value):
 
     if not isinstance(value, bool):
         raise TypeError('value argument type is not boolean')
-
-    if settings.MAINTENANCE_MODE_EXPIRE_DB_SESSIONS and value:
-        Session.objects.all().delete()
 
     value = str(int(value))
     io.write_file(settings.MAINTENANCE_MODE_STATE_FILE_PATH, value)

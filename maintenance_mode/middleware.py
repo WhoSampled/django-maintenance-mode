@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import django
+
+from django.contrib.auth import logout
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import NoReverseMatch, resolve, reverse
 from django.http import HttpResponseRedirect
@@ -54,6 +56,9 @@ class MaintenanceModeMiddleware(__MaintenanceModeMiddlewareBaseClass):
 
                 if settings.MAINTENANCE_MODE_IGNORE_ANONYMOUS and request.user.is_anonymous():
                     return None
+
+                if settings.MAINTENANCE_MODE_EXPIRE_SESSION and request.user.is_authenticated():
+                    logout(request)
 
             if settings.MAINTENANCE_MODE_IGNORE_TESTS:
 
